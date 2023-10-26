@@ -4,7 +4,7 @@
 
 # Nearest Neighbor Search over Vectorized Lexico-Syntactic Patterns for Relation Extraction from Financial Documents
 
-
+[![Conference](https://img.shields.io/badge/EMNLP-2023-green)](https://2023.emnlp.org/)
 [![Workshop](https://img.shields.io/badge/PAN_DL-2023-blue)](https://pan-dl.github.io/2023/about)
 [![Paper](https://img.shields.io/badge/paper-pdf-red)](https://arxiv.org/abs/2207.08150)
 
