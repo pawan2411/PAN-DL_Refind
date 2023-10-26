@@ -116,7 +116,7 @@ for RC in REL_CHECK:
 with open('sdp_ner_train_embedding.pickle', 'wb') as handle:
     pickle.dump(global_res_dic, handle, protocol=pickle.HIGHEST_PROTOCOL)
 
-    # orig_file2 = "C:/Users/Admin/Downloads/dev_refind_clean.json"
+    # orig_file2 = "input_data/dev_refind_clean.json"
     # file_inp = open(orig_file2, "r")
     # from statistics import mean
     #
