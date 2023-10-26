@@ -5,8 +5,8 @@
 # FashionViL: Fashion-Focused Vision-and-Language Representation Learning
 
 
-[![Conference](https://pan-dl.github.io/static/554a1560f214b16cd66fa6fa2680f3ac/05bbd/logo.png)](https://pan-dl.github.io/2023/about)
-[![Paper](https://img.shields.io/badge/PAN_DL-2023-blue)](https://arxiv.org/abs/2207.08150)
+[![Conference](https://img.shields.io/badge/PAN_DL-2023-blue)](https://pan-dl.github.io/2023/about)
+[![Paper](https://img.shields.io/badge/paper-pdf-red)](https://arxiv.org/abs/2207.08150)
 
 </div>
 
