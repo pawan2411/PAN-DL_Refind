@@ -7,14 +7,7 @@ import spacy
 import torch
 from sentence_transformers import SentenceTransformer, util
 
-# REL_CHECK = "ORG-ORG"
-# REL_CHECK = "PERSON-UNIV"
-# REL_CHECK = "PERSON-GOV_AGY"
-# REL_CHECK = "PERSON-ORG"
-# REL_CHECK = "PERSON-TITLE"
-# REL_CHECK = "ORG-GPE"
-# REL_CHECK = "ORG-MONEY"
-# REL_CHECK = "ORG-DATE"
+
 REL_CHECK = ["ORG-ORG", "PERSON-UNIV", "PERSON-GOV_AGY", "PERSON-ORG", "PERSON-TITLE", "ORG-GPE", "ORG-MONEY",
              "ORG-DATE"]
 TOP_K = 7
@@ -52,13 +45,26 @@ def parse_str(sent, e1, e2, e1_n, e2_n):
     res_str = e1_n.split("_")[0]
     # + "/" + pos_dic[e1.split(" ")[0]]
     # res_str = e1+" (e1/"+e1_n+")"
+  #SDP
+    #for k in res[1:-1]:
+     #   res_str = res_str + " " + k.split("-")[0]# + "/" + pos_dic[k.split("-")[0]]
+    #return res_str + " " + e2_n.split("_")[0]
+  #SDP+NER
+    #for k in res[1:-1]:
+     #   res_str = res_str + " " + k.split("-")[0]# 
+      #  if k.split("-")[0] in ner_dic:
+       #     res_str = res_str + "/" + ner_dic[k.split("-")[0]]
+    #return res_str + " " + e2_n.split("_")[0]
+  #SDP+DEP
+    #for k in res[1:-1]:
+     #   res_str = res_str + " " + k.split("-")[0] + "/" + pos_dic[k.split("-")[0]]
+    #return res_str + " " + e2_n.split("_")[0]
+  #SDP+DEP+NER
     for k in res[1:-1]:
-        res_str = res_str + " " + k.split("-")[0]  # + "/" + pos_dic[k.split("-")[0]]
+        res_str = res_str + " " + k.split("-")[0] + "/" + pos_dic[k.split("-")[0]]
         if k.split("-")[0] in ner_dic:
             res_str = res_str + "/" + ner_dic[k.split("-")[0]]
     return res_str + " " + e2_n.split("_")[0]
-    # + "/" + pos_dic[e2.split(" ")[0]]
-    # return res_str + " " + e2+" (e2/"+e2_n+")"
 
 
 global_res_dic = {}
