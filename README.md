@@ -5,16 +5,16 @@
 # FashionViL: Fashion-Focused Vision-and-Language Representation Learning
 
 
-[![Conference](https://img.shields.io/badge/PAN_DL-2023-blue)](https://pan-dl.github.io/2023/about)
+[![Workshop](https://img.shields.io/badge/PAN_DL-2023-blue)](https://pan-dl.github.io/2023/about)
 [![Paper](https://img.shields.io/badge/paper-pdf-red)](https://arxiv.org/abs/2207.08150)
 
 </div>
 
 ## Updates
 
-- :grin: (01/11/2022) Updated talk and poster.
 - :relieved: (19/09/2022) Added detailed running instructions.
-- :blush: (19/07/2022) Code released!
+- :grin: (06/12/2023) Workshop.
+- :blush: (06/10/2023) Paper Accepted.
 
 ## Abstract
 
