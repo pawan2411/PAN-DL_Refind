@@ -26,8 +26,8 @@ Relation extraction (RE) has achieved remarkable progress with the help of pre-t
 ## Setup
 1. pip install -r requirements.txt
 2. run Refind_index_train to create embeddings and index train file.
-3. run Refind_index_query to create embeddings for test data, query train index and find similar patterns.
-4. evaluate.py for fallback evaluation
+3. run Refind_index_query to create embeddings and index test file.
+4. evaluate.py run top k match algo for each query embed with fallback evaluation for no template found case with f1 score calculation. [see-paper-for-details]
 NOTE: for pattern templates mentioned in paper see comments in parse_str method in both 2,3 point files.
 ```
 citation
