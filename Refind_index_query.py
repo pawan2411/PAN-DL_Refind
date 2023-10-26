@@ -44,12 +44,26 @@ def parse_str(sent, e1, e2, e1_n, e2_n):
     res_str = e1_n.split("_")[0]
     # + "/" + pos_dic[e1.split(" ")[0]]
     # res_str = e1+" (e1/"+e1_n+")"
+  #SDP
+    #for k in res[1:-1]:
+     #   res_str = res_str + " " + k.split("-")[0]# + "/" + pos_dic[k.split("-")[0]]
+    #return res_str + " " + e2_n.split("_")[0]
+  #SDP+NER
+    #for k in res[1:-1]:
+     #   res_str = res_str + " " + k.split("-")[0]# 
+      #  if k.split("-")[0] in ner_dic:
+       #     res_str = res_str + "/" + ner_dic[k.split("-")[0]]
+    #return res_str + " " + e2_n.split("_")[0]
+  #SDP+DEP
+    #for k in res[1:-1]:
+     #   res_str = res_str + " " + k.split("-")[0] + "/" + pos_dic[k.split("-")[0]]
+    #return res_str + " " + e2_n.split("_")[0]
+  #SDP+DEP+NER
     for k in res[1:-1]:
-        res_str = res_str + " " + k.split("-")[0]# + "/" + pos_dic[k.split("-")[0]]
+        res_str = res_str + " " + k.split("-")[0] + "/" + pos_dic[k.split("-")[0]]
         if k.split("-")[0] in ner_dic:
             res_str = res_str + "/" + ner_dic[k.split("-")[0]]
     return res_str + " " + e2_n.split("_")[0]
-
 
 # with open('sdp_dr_ner_train_embedding.pickle', 'rb') as handle:
 #     all_embed = pickle.load(handle)
@@ -99,22 +113,4 @@ for k in file_inp.readlines():
     # query_dic[RC] = small_dic
 with open('sdp_ner_dev_embedding.pickle', 'wb') as handle:
         pickle.dump(query_list, handle, protocol=pickle.HIGHEST_PROTOCOL)
-    # # print("Orig: ", data["relation"])
-    # max_score = 0
-    # max_clas = ""
-    # embed_dic = all_embed[data["rel_group"]]
-    #
-    # for ki, vi in embed_dic.items():
-    #     # print("top for ", ki)
-    #     cos_scores = util.cos_sim(query_embedding, vi)[0]
-    #     top_results = torch.topk(cos_scores, k=TOP_K)
-    #
-    #     # print("Query:", res)
-    #     sc = (mean(top_results[0].tolist()))
-    #     if sc > max_score:
-    #         max_score = sc
-    #         max_clas = ki
-    #
-    #     # for score, idx in zip(top_results[0], top_results[1]):
-    #     #     print(res_dic[ki][idx], "(Score: {:.4f})".format(score))
-    # print(max_clas.strip(), data["relation"].strip())
+
