@@ -11,7 +11,7 @@ from sentence_transformers import SentenceTransformer, util
 REL_CHECK = ["ORG-ORG", "PERSON-UNIV", "PERSON-GOV_AGY", "PERSON-ORG", "PERSON-TITLE", "ORG-GPE", "ORG-MONEY",
              "ORG-DATE"]
 TOP_K = 7
-model = SentenceTransformer('D:/projects/mp-net/')
+model = SentenceTransformer('sentence-transformers/all-mpnet-base-v2')
 
 nlp = spacy.load('en_core_web_sm')
 
@@ -115,53 +115,3 @@ for RC in REL_CHECK:
     global_res_dic[RC] = embed_dic
 with open('sdp_ner_train_embedding.pickle', 'wb') as handle:
     pickle.dump(global_res_dic, handle, protocol=pickle.HIGHEST_PROTOCOL)
-
-    # orig_file2 = "input_data/dev_refind_clean.json"
-    # file_inp = open(orig_file2, "r")
-    # from statistics import mean
-    #
-    # import numpy as np
-    # from sklearn.metrics import f1_score
-    #
-    # y_true = []
-    # y_pred = []
-    #
-    # fail_count = 0
-    # avg_sc=0
-    # for k in file_inp.readlines():
-    #     data = json.loads(k)
-    #     li2 = copy.deepcopy(data)
-    #     if RC not in data['rel_group']:
-    #         continue
-    #     del li2['sentence']
-    #     del li2['relation']
-    #     del li2['rel_group']
-    #     ets = list(li2.values())
-    #     et_keys = list(li2.keys())
-    #     try:
-    #         res = parse_str(data['sentence'], ets[0].lower(), ets[1].lower(), et_keys[0].lower(), et_keys[1].lower())
-    #     except:
-    #         fail_count = fail_count + 1
-    #         y_pred.append("no_relation")
-    #         y_true.append(data["relation"].strip())
-    #         print("FAIL ", fail_count,data["relation"].strip())
-    #         continue
-    #     query_embedding = model.encode(res, convert_to_tensor=True)
-    #
-    #     # print("Orig: ", data["relation"])
-    #     max_score = 0
-    #     max_clas = ""
-    #     for ki, vi in embed_dic.items():
-    #         # print("top for ", ki)
-    #         cos_scores = util.cos_sim(query_embedding, vi)[0]
-    #         top_results = torch.topk(cos_scores, k=TOP_K)
-    #
-    #         # print("Query:", res)
-    #         sc = (mean(top_results[0].tolist()))
-    #         if sc > max_score:
-    #             max_score = sc
-    #             max_clas = ki
-    #
-    #         # for score, idx in zip(top_results[0], top_results[1]):
-    #         #     print(res_dic[ki][idx], "(Score: {:.4f})".format(score))
-    #     print(max_clas.strip(), data["relation"].strip())
