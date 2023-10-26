@@ -6,7 +6,7 @@
 
 
 [![Conference](https://pan-dl.github.io/static/554a1560f214b16cd66fa6fa2680f3ac/05bbd/logo.png)](https://pan-dl.github.io/2023/about)
-[![Paper](http://img.shields.io/badge/Paper-arxiv.2207.08150-B31B1B.svg)](https://arxiv.org/abs/2207.08150)
+[![Paper](https://img.shields.io/badge/PAN_DL-2023-blue)](https://arxiv.org/abs/2207.08150)
 
 </div>
 
