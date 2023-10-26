@@ -11,9 +11,8 @@
 </div>
 
 ## Updates
-
-- :relieved: (19/09/2022) Added detailed running instructions.
 - :grin: (06/12/2023) Workshop.
+- :relieved: (27/10/2023) Added detailed running instructions.
 - :blush: (06/10/2023) Paper Accepted.
 
 ## Abstract
