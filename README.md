@@ -22,7 +22,7 @@ Relation extraction (RE) has achieved remarkable progress with the help of pre-t
 
 ## Architecture
 
-![](assests/pattern3.jpg)
+![](pattern.jpg)
 
 
 ```
