@@ -25,10 +25,5 @@ Relation extraction (RE) has achieved remarkable progress with the help of pre-t
 
 
 ```
-@inproceedings{han2022fashionvil,
-  title={FashionViL: Fashion-Focused Vision-and-Language Representation Learning},
-  author={Han, Xiao and Yu, Licheng and Zhu, Xiatian and Zhang, Li and Song, Yi-Zhe and Xiang, Tao},
-  booktitle={ECCV},
-  year={2022}
-}
+citation
 ```
