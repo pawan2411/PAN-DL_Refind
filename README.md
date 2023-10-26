@@ -2,7 +2,7 @@
 
 <div align="center">
 
-# FashionViL: Fashion-Focused Vision-and-Language Representation Learning
+# Nearest Neighbor Search over Vectorized Lexico-Syntactic Patterns for Relation Extraction from Financial Documents
 
 
 [![Workshop](https://img.shields.io/badge/PAN_DL-2023-blue)](https://pan-dl.github.io/2023/about)
