@@ -12,7 +12,7 @@ from sentence_transformers import SentenceTransformer
 REL_CHECK = ["ORG-ORG", "PERSON-UNIV", "PERSON-GOV_AGY", "PERSON-ORG", "PERSON-TITLE", "ORG-GPE", "ORG-MONEY",
              "ORG-DATE"]
 TOP_K = 7
-model = SentenceTransformer('D:/projects/mp-net/')
+model = SentenceTransformer('sentence-transformers/all-mpnet-base-v2')
 
 nlp = spacy.load('en_core_web_sm')
 
@@ -72,7 +72,7 @@ def parse_str(sent, e1, e2, e1_n, e2_n):
 #     relation_dic = pickle.load(handle)
 
 # for RC in REL_CHECK:
-orig_file2 = "C:/Users/Admin/Downloads/dev_refind_clean.json"
+orig_file2 = "input_data/dev_refind_clean.json"
 file_inp = open(orig_file2, "r")
 from statistics import mean
 
