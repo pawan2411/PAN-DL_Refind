@@ -31,4 +31,12 @@ Relation extraction (RE) has achieved remarkable progress with the help of pre-t
 NOTE: for pattern templates mentioned in paper see comments in parse_str method in both 2,3 point files.
 ```
 citation
+@misc{rajpoot2023nearest,
+      title={Nearest Neighbor Search over Vectorized Lexico-Syntactic Patterns for Relation Extraction from Financial Documents}, 
+      author={Pawan Kumar Rajpoot and Ankur Parikh},
+      year={2023},
+      eprint={2310.17714},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL}
+}
 ```
